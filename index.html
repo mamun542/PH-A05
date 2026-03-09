@@ -138,3 +138,25 @@
             </div>
         </div>
     </div>
+    <script>
+        let issuesStore = [];
+        const loginForm = document.getElementById('loginForm');
+        const loginPage = document.getElementById('loginPage');
+        const dashboard = document.getElementById('dashboard');
+        const grid = document.getElementById('grid');
+        const count = document.getElementById('count');
+        const loader = document.getElementById('loader');
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+
+            if (user === 'admin' && pass === 'admin123') {
+                loginPage.style.display = 'none';
+                dashboard.style.display = 'block';
+                fetchIssues();
+            } else {
+                alert('Invalid Credentials!');
+            }
+        });
