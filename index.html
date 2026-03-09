@@ -129,3 +129,12 @@
             <div id="grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
         </main>
     </div>
+    <div id="modal" class="fixed inset-0 bg-black/40 hidden flex items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-2xl w-full max-w-2xl p-6 sm:p-10 relative max-h-[90vh] overflow-y-auto">
+            <div id="modalData"></div>
+            <div class="mt-10 flex justify-end">
+                <button onclick="closeModal()"
+                    class="w-full sm:w-auto bg-[#4f00ff] text-white px-8 py-2.5 rounded-lg font-bold">Close</button>
+            </div>
+        </div>
+    </div>
